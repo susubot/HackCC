@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Map</title>
+    <link rel="stylesheet" href="tutorMap.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map"></div>
+    <div id="sidebar">
+        <h2 id="cityName">City</h2>
+        <div id="tutorList"></div>
+        <button onclick="closeSidebar()">Close</button>
+    </div>
+    <form id="tutorForm">
+        <input type="text" id="name" placeholder="Tutor Name" required />
+        <input type="text" id="city" placeholder="City" required />
+        <input type="text" id="subjects" placeholder="Subjects (comma-separated)" required />
+        <input type="text" id="experience" placeholder="Experience (e.g., 3 years)" required />
+        <input type="text" id="availability" placeholder="Availability (e.g., Weekdays 4 PM - 6 PM)" required />
+        <button type="submit">Add Tutor</button>
+    </form>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="tutorMap.js"></script>
+</body>
+</html>

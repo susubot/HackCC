@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+#sidebar {
+    position: fixed;
+    right: -300px; /* Hidden initially */
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#sidebar.active {
+    right: 0; /* Slide in */
+}
+
+#sidebar h2 {
+    margin: 0 0 10px;
+}
+
+.tutor-profile {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tutor-profile strong {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+form input, form button {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+form button {
+    background: #84C5A9;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #84C5A9;
+}
+
