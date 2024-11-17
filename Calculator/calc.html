@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+  <!-- Green Top Bar -->
+  <div class="button-bar">
+    <img class="iconPics" src="../iconPics/calculator icon.png">
+    <button class="rectangle-button">
+      <a href="http://127.0.0.1:5500/Calculator/calc.html">
+        Calculator
+      </a>
+    </button>
+    <img class="iconPics" src="../iconPics/tutor icon.png">
+    <button class="rectangle-button">Tutors</button>
+    <img class="iconPics" src="../iconPics/forum icon.png">
+    <button class="rectangle-button">Forum</button>
+    <img class="iconPics" src="../iconPics/profile icon.png">
+    <button class="rectangle-button">
+      <a href="http://127.0.0.1:5500/Profile/profile.html#">
+        Profile
+      </a>
+      </button>
+    <img class="iconPics" src="../iconPics/library icon.png">
+    <button class="rectangle-button">Library</button>
+  </div>
+ 
+
+  <!-- Sidebar and Main Content -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <button class="sidebar-btn">Basic Calculator</button>
+      <button class="sidebar-btn">Algebra</button>
+      <button class="sidebar-btn">Geometry</button>
+      <button class="sidebar-btn">Trigonometry</button>
+      <button class="sidebar-btn">Statistics</button>
+      <button class="sidebar-btn">Linear Algebra</button>
+      <button class="sidebar-btn">Physics</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="calculator">
+        <input type="text" id="result" disabled>
+        <div class="buttons">
+          <button onclick="clearResult()">C</button>
+          <button onclick="appendValue('/')">/</button>
+          <button onclick="appendValue('*')">*</button>
+          <button onclick="appendValue('-')">-</button>
+          <button onclick="appendValue('7')">7</button>
+          <button onclick="appendValue('8')">8</button>
+          <button onclick="appendValue('9')">9</button>
+          <button onclick="appendValue('+')">+</button>
+          <button onclick="appendValue('4')">4</button>
+          <button onclick="appendValue('5')">5</button>
+          <button onclick="appendValue('6')">6</button>
+          <button onclick="appendValue('.')">.</button>
+          <button onclick="appendValue('1')">1</button>
+          <button onclick="appendValue('2')">2</button>
+          <button onclick="appendValue('3')">3</button>
+          
+          <button onclick="calculate()">=</button>
+          <button onclick="appendValue('0')">0</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function appendValue(value) {
+      document.getElementById('result').value += value;
+    }
+
+    function clearResult() {
+      document.getElementById('result').value = '';
+    }
+
+    function calculate() {
+      try {
+        document.getElementById('result').value = eval(document.getElementById('result').value);
+      } catch {
+        document.getElementById('result').value = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>

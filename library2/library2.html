@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="library2.css">
+</head>
+<body>
+  <!-- Green Top Bar -->
+  <div class="button-bar">
+    <img class="iconPics" src="../iconPics/calculator icon.png">
+    <button class="rectangle-button">
+      <a href="http://127.0.0.1:5500/Calculator/calc.html" >
+        Calculator
+      </a>
+    </button>
+    <img class="iconPics" src="../iconPics/tutor icon.png">
+    <button class="rectangle-button">Tutors</button>
+    <img class="iconPics" src="../iconPics/forum icon.png">
+    <button class="rectangle-button">Forum</button>
+    <img class="iconPics" src="../iconPics/profile icon.png">
+    <button class="rectangle-button">
+      <a href="http://127.0.0.1:5500/Profile/profile.html#" >
+        Profile
+      </a>
+      </button>
+    <img class="iconPics" src="../iconPics/library icon.png">
+    <button class="rectangle-button">Library</button>
+  </div>
+ 
+
+  <!-- Sidebar and Main Content -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <button class="sidebar-btn">Mathematics</button>
+      <button class="sidebar-btn">Physics</button>
+      <button class="sidebar-btn">English</button>
+      <button class="sidebar-btn">Biology</button>
+      <button class="sidebar-btn">History</button>
+      <button class="sidebar-btn">Chemistry</button>
+      <button class="sidebar-btn">Economics</button>
+    </div>
+
+    <div class="content">
+      <div class="search-container">
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="Search books..." autocomplete="off" />
+          <button type="submit">Search</button>
+        </form>
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+  
+      <!-- Grid Container -->
+      <div class="grid-container">
+        
+        <button class="card" onclick="location.href='https://drive.google.com/file/d/1l5UGjQq19Mx3hm2KqZu1p1yfQx0Zzl2X/view';">
+          
+          <img src="../iconPics/Physics.webp" alt="Book 1" class="card-image">
+          <div class="card-content">
+            <p class="card-title">College Physics: A Strategic Approach</p>
+            <p class="card-author">Knight, Jones, Field</p>
+          </div>
+        </button>
+
+        <button class="card" onclick="location.href='chemistry101.html';">
+          <img src="../iconPics/Physics2.jpg" alt="Book 2" class="card-image">
+          <div class="card-content">
+            <p class="card-title">College Physics</p>
+            <p class="card-author">Serway, Vuille</p>
+          </div>
+
+        <button class="card" onclick="location.href='chemistry101.html';">
+          <img src="../iconPics/Physics2.jpg" alt="Book 2" class="card-image">
+          <div class="card-content">
+            <p class="card-title">College Physics</p>
+            <p class="card-author">Serway, Vuille</p>
+          </div>
+
+        <button class="card" onclick="location.href='chemistry101.html';">
+          <img src="../iconPics/Physics2.jpg" alt="Book 2" class="card-image">
+          <div class="card-content">
+            <p class="card-title">College Physics</p>
+            <p class="card-author">Serway, Vuille</p>
+          </div>
+          
+        <button class="card" onclick="location.href='chemistry101.html';">
+          <img src="../iconPics/Physics2.jpg" alt="Book 2" class="card-image">
+          <div class="card-content">
+            <p class="card-title">College Physics</p>
+            <p class="card-author">Serway, Vuille</p>
+          </div>
+
+        </button>
+        <!-- Repeat for more cards -->
+      </div>
+    </div>
+  </body>
+  </html>
+    
+

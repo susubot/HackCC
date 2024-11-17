@@ -1,0 +1,257 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-container {
+  background-color: #fff;
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-details {
+  font-size: 16px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+
+.user-details h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.user-details p {
+  margin: 5px 0;
+}
+
+.user-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.user-details a:hover {
+  text-decoration: underline;
+}
+
+ a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Ensures the link inherits the surrounding text color */
+}
+
+a:focus, a:active {
+  outline: none; /* Removes the blue highlight when the link is focused or active */
+}
+
+a:hover {
+  text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.iconPics {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 0px;
+ }
+ 
+ 
+ .button-bar {
+  background-color: #8d8d8d;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+ }
+
+ .rectangle-button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #84C5A9;
+  transition: all 0.2s ease;
+  font-family: "JetBrains Mono", monospace;
+  margin-left: 20px;
+  margin-right: 70px;
+}
+
+.rectangle-button:active {
+  transform: scale(0.96);
+}
+
+.rectangle-button:before,
+.rectangle-button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.rectangle-button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #84C5A9 20%, transparent 30%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #84C5A9 15%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.rectangle-button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #84C5A9 15%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%),
+    radial-gradient(circle, #84C5A9 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover {
+  color: #ddd;
+}
+
+
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Ensures the link inherits the surrounding text color */
+}
+
+a:focus, a:active {
+  outline: none; /* Removes the blue highlight when the link is focused or active */
+}
+
+a:hover {
+  text-decoration: none; /* Ensures no underline appears on hover */
+}

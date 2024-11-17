@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="math.css">
+</head>
+<body>
+  <!-- Green Top Bar -->
+  <div class="button-bar">
+    <img class="iconPics" src="../../iconPics/calculator icon.png">
+    <button class="rectangle-button">
+      <a href="calc.html" target="_blank">Calculator</a>
+    </button>
+    <img class="iconPics" src="../../iconPics/tutor icon.png">
+    <button class="rectangle-button">Tutors</button>
+    <img class="iconPics" src="../../iconPics/forum icon.png">
+    <button class="rectangle-button">Forum</button>
+    <img class="iconPics" src="../../iconPics/profile icon.png">
+    <button class="rectangle-button">
+      <a href="profile.html" target="_blank">Profile</a>
+    </button>
+    <img class="iconPics" src="../../iconPics/library icon.png">
+    <button class="rectangle-button">Library</button>
+  </div>
+  
+  <!-- Sidebar and Main Content -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <button class="sidebar-btn" onclick="filterBooks('Mathematics')">Mathematics</button>
+      <button class="sidebar-btn" onclick="filterBooks('Physics')">Physics</button>
+      <button class="sidebar-btn" onclick="filterBooks('English')">English</button>
+      <button class="sidebar-btn" onclick="filterBooks('Biology')">Biology</button>
+      <button class="sidebar-btn" onclick="filterBooks('History')">History</button>
+      <button class="sidebar-btn" onclick="filterBooks('Chemistry')">Chemistry</button>
+      <button class="sidebar-btn" onclick="filterBooks('Economics')">Economics</button>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="search-container">
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="Search books..." autocomplete="off" />
+          <button type="submit">Search</button>
+        </form>
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+  
+      <!-- Grid Container -->
+      <div class="grid-container">
+        <div class="card" data-genre="Physics" onclick="location.href='https://drive.google.com/file/d/1l5UGjQq19Mx3hm2KqZu1p1yfQx0Zzl2X/view';">
+          <img src="../../iconPics/Physics.webp" alt="Book 1" class="card-image">
+          <div class="card-content">
+            <p class="card-title">College Physics: A Strategic Approach</p>
+            <p class="card-author">Knight, Jones, Field</p>
+          </div>
+        </div>
+
+        <div class="card" data-genre="Chemistry" onclick="location.href='chemistry101.html';">
+          <img src="../../iconPics/Physics2.jpg" alt="Book 2" class="card-image">
+          <div class="card-content">
+            <p class="card-title">Chemistry Concepts</p>
+            <p class="card-author">Serway, Vuille</p>
+          </div>
+        </div>
+        <!-- Repeat cards with proper data-genre attributes -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterBooks(genre) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (card.getAttribute('data-genre') === genre || genre === 'All') {
+          card.style.display = 'block'; // Show cards
+        } else {
+          card.style.display = 'none'; // Hide non-matching cards
+        }
+      });
+
+      // Highlight active button
+      const buttons = document.querySelectorAll('.sidebar-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    filterBooks('All'); // Default: Show all
+  </script>
+</body>
+</html>
