@@ -14,17 +14,16 @@ html, body {
   min-height: 100vh;
  }
  
- 
- /* Blue bar fixed to the top */
+
  .button-bar {
-  background-color: #007bff;
+  background-color: #84C5A9;
   padding: 10px 20px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 50%;
@@ -32,37 +31,44 @@ html, body {
  }
  
  
- .circle-button {
-  width: 50px;
+ .rectangle-button {
+  
+  width: 200px;
   height: 50px;
-  background-color: #28a745;
+  background-color: #84C5A9;
   border: none;
-  border-radius: 50%;
+  border-radius: 10px;
   color: white;
-  font-size: 18px;
+  padding-left: 0px;
+  padding-bottom: 64px;
+  font-size: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
  }
  
  
- .circle-button:hover {
-  background-color: #218838;
+ .rectangle-button:hover {
+  background-color: #84C5A9;
  }
  
  
- .circle-button:active {
-  background-color: #1e7e34;
+ .rectangle-button:active {
+  background-color: #84C5A9;
  }
  
  
- /* Center the calculator below the bar */
+ 
  .calculator {
-  background-color: #fff;
+  
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
   width: 320px;
-  margin-top: 100px; /* Leave space for the fixed blue bar */
+  margin-top: 100px; 
+  background: #e0e0e0;
+ 
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+
  }
  
  
@@ -71,12 +77,13 @@ html, body {
   height: 50px;
   text-align: right;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   box-sizing: border-box;
   background-color: #f9f9f9;
+  
  }
  
  
@@ -107,4 +114,30 @@ html, body {
  button:active {
   background-color: #004494;
  }
+
+ /*.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+}
+
+.card__content {
+  background: rgb(5, 6, 45);
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+}*/
+
+.iconPics {
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+
+
+
  
