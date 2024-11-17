@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Map</title>
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        /* CSS to ensure the map has a fixed size */
+        #map {
+            height: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tutor Map</h1>
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Form to add tutor -->
+    <form id="tutorForm">
+        <input type="text" id="name" placeholder="Tutor Name" autocomplete="name" required />
+        <input type="text" id="city" placeholder="City" autocomplete="address-level2" required />
+        <button type="submit">Add Tutor</button>
+    </form>
+
+    <!-- Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
