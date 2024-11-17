@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  <link rel="stylesheet" href="calc.css">
+  <link rel="stylesheet" href="testing.css">
 </head>
 <body>
   <!-- Green Top Bar -->
@@ -45,48 +45,25 @@
 
     <!-- Main Content -->
     <div class="main-content">
-      <div class="calculator">
-        <input type="text" id="result" disabled>
-        <div class="buttons">
-          <button onclick="clearResult()">C</button>
-          <button onclick="appendValue('/')">/</button>
-          <button onclick="appendValue('*')">*</button>
-          <button onclick="appendValue('-')">-</button>
-          <button onclick="appendValue('7')">7</button>
-          <button onclick="appendValue('8')">8</button>
-          <button onclick="appendValue('9')">9</button>
-          <button onclick="appendValue('+')">+</button>
-          <button onclick="appendValue('4')">4</button>
-          <button onclick="appendValue('5')">5</button>
-          <button onclick="appendValue('6')">6</button>
-          <button onclick="appendValue('.')">.</button>
-          <button onclick="appendValue('1')">1</button>
-          <button onclick="appendValue('2')">2</button>
-          <button onclick="appendValue('3')">3</button>
-          
-          <button onclick="calculate()">=</button>
-          <button onclick="appendValue('0')">0</button>
-        </div>
-      </div>
+      
+      <div id="map"></div>
+      <div id="sidebar">
+        <h2 id="cityName">City</h2>
+        <div id="tutorList"></div>
+        <button onclick="closeSidebar()">Close</button>
     </div>
+    <form id="tutorForm">
+        <input type="text" id="name" placeholder="Tutor Name" required />
+        <input type="text" id="city" placeholder="City" required />
+        <input type="text" id="subjects" placeholder="Subjects (comma-separated)" required />
+        <input type="text" id="experience" placeholder="Experience (e.g., 3 years)" required />
+        <input type="text" id="availability" placeholder="Availability (e.g., Weekdays 4 PM - 6 PM)" required />
+        <button type="submit">Add Tutor</button>
+    </form>
+
   </div>
 
-  <script>
-    function appendValue(value) {
-      document.getElementById('result').value += value;
-    }
-
-    function clearResult() {
-      document.getElementById('result').value = '';
-    }
-
-    function calculate() {
-      try {
-        document.getElementById('result').value = eval(document.getElementById('result').value);
-      } catch {
-        document.getElementById('result').value = 'Error';
-      }
-    }
-  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="testing.js"></script>
 </body>
 </html>
