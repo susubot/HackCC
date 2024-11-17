@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+ }
+ 
+ 
+ body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+ }
+ 
+ 
+ /* Blue bar fixed to the top */
+ .button-bar {
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+ }
+ 
+ 
+ .circle-button {
+  width: 50px;
+  height: 50px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+ }
+ 
+ 
+ .circle-button:hover {
+  background-color: #218838;
+ }
+ 
+ 
+ .circle-button:active {
+  background-color: #1e7e34;
+ }
+ 
+ 
+ /* Center the calculator below the bar */
+ .calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  margin-top: 100px; /* Leave space for the fixed blue bar */
+ }
+ 
+ 
+ #result {
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  font-size: 24px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+ }
+ 
+ 
+ .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+ }
+ 
+ 
+ button {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+ }
+ 
+ 
+ button:hover {
+  background-color: #0056b3;
+ }
+ 
+ 
+ button:active {
+  background-color: #004494;
+ }
+ 
